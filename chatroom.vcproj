@@ -25,7 +25,7 @@
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
 				TreatWChar_tAsBuiltInType="TRUE"
-				UsePrecompiledHeader="3"
+				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="TRUE"
 				DebugInformationFormat="4"/>
@@ -125,25 +125,13 @@
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
 			<File
-				RelativePath=".\chatroom.cpp">
+				RelativePath=".\src\chatroom.cpp">
 			</File>
 			<File
-				RelativePath=".\chatroomDlg.cpp">
+				RelativePath=".\src\chatroomDlg.cpp">
 			</File>
 			<File
-				RelativePath=".\stdafx.cpp">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"/>
-				</FileConfiguration>
+				RelativePath=".\src\stdafx.cpp">
 			</File>
 		</Filter>
 		<Filter
@@ -151,16 +139,16 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
 			<File
-				RelativePath=".\chatroom.h">
+				RelativePath=".\src\chatroom.h">
 			</File>
 			<File
-				RelativePath=".\chatroomDlg.h">
+				RelativePath=".\src\chatroomDlg.h">
 			</File>
 			<File
-				RelativePath=".\Resource.h">
+				RelativePath=".\resource.h">
 			</File>
 			<File
-				RelativePath=".\stdafx.h">
+				RelativePath=".\src\stdafx.h">
 			</File>
 		</Filter>
 		<Filter
