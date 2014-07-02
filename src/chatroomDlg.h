@@ -35,5 +35,7 @@ public:
 	afx_msg void OnBnClickedButton1();
 	CListBox m_listbox_main;
 	CEdit m_editctrl_main;
+	//afx_msg void OnLbnSelchangeList1();
 	afx_msg void OnLbnSelchangeList1();
+	afx_msg void OnEnChangeEdit1();
 };

@@ -82,38 +82,18 @@ void sendss(CString mymsg)
     sockaddr_in sockaddr;
     sockaddr.sin_family=PF_INET;
     sockaddr.sin_addr.S_un.S_addr=inet_addr("127.0.0.1");
-    sockaddr.sin_port=htons(9000);
+    sockaddr.sin_port=htons(10001);
 
     connect(s, (SOCKADDR*)&sockaddr, sizeof(SOCKADDR));
 
     char buffer[MAXBYTE]={0};
-    recv(s, buffer, MAXBYTE, NULL);
 
-    //while(TRUE)
-    {
-        //char* mymsg=new char[100000];
-        //printf("You can chat with server now:\n");
-        //gets(mymsg);
-        send(s, mymsg, strlen(mymsg)+sizeof(char), NULL);
-        /*
-           recv函数中的bufferlength参数是可以固定值的
-           send函数中的bufferlength参数不能固定值，需要看实际长度，并且考虑到'\0'字符串
-        */
-        memset(buffer,0,sizeof(buffer));
-        // recv(s, buffer, MAXBYTE, NULL);
-        // if(strlen(buffer)!=0)
-        // {
-        //     printf("***SERVER***: %s", buffer);
-        // }
-        // else
-        // {
-        //     printf("Server dead\n");
-        // }
-        // if(Equal(mymsg,"exit"))
-        // {
-        //     closesocket(s);
-        // }
-    }
+    send(s, mymsg, strlen(mymsg)+sizeof(char), NULL);
+    /*
+       recv函数中的bufferlength参数是可以固定值的
+       send函数中的bufferlength参数不能固定值，需要看实际长度，并且考虑到'\0'字符串
+    */
+    memset(buffer,0,sizeof(buffer));
 
     closesocket(s);
     WSACleanup();

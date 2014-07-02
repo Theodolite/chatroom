@@ -66,6 +66,8 @@ BEGIN_MESSAGE_MAP(CchatroomDlg, CDialog)
 	//}}AFX_MSG_MAP
 	ON_BN_CLICKED(IDCANCEL, OnBnClickedCancel)
 	ON_BN_CLICKED(IDC_BUTTON1, OnBnClickedButton1)
+	ON_LBN_SELCHANGE(IDC_LIST1, OnLbnSelchangeList1)
+	ON_EN_CHANGE(IDC_EDIT1, OnEnChangeEdit1)
 END_MESSAGE_MAP()
 
 
@@ -189,3 +191,18 @@ void CchatroomDlg::OnBnClickedButton1()
 	sendss(name+": "+str);
 }
 
+
+void CchatroomDlg::OnLbnSelchangeList1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+}
+
+void CchatroomDlg::OnEnChangeEdit1()
+{
+	// TODO:  如果该控件是 RICHEDIT 控件，则它将不会
+	// 发送该通知，除非重写 CDialog::OnInitDialog()
+	// 函数并调用 CRichEditCtrl().SetEventMask()，
+	// 同时将 ENM_CHANGE 标志“或”运算到掩码中。
+
+	// TODO:  在此添加控件通知处理程序代码
+}
